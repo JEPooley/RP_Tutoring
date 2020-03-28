@@ -1,0 +1,143 @@
+:root {
+	--channel-width: 960px;
+	--header-height: 100px;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #545454;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: var(--header-height);
+}
+
+    header>div {
+	    display: flex;
+	    align-items: center;
+    }
+    
+    header>nav {
+	    display: none;
+	    flex-direction: column;
+	    position: absolute;
+	    width: 100%;
+	    text-align: center;
+	    top: var(--header-height);
+    }
+
+    header h1 {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+nav>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+    nav>a:hover {
+        color: #2d2d2d;
+    }
+
+section {
+    width: 100%;
+    margin-top: 80px;
+    box-sizing: border-box;
+    padding: 0 30px 0 30px;
+}
+
+article {
+    width: 100%;
+    text-align: justify;
+}
+
+    article>h2 {
+        font-size: 18px;
+    }
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 400;
+    color: #2d2d2d;
+}
+
+@media only screen and (min-width: 960px) {
+	article {
+		width: var(--channel-width);
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 750px) {
+    header>nav {
+		display: flex !important;
+		align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+		position: static;
+		width: 400px;
+		top: 0;
+	}
+	header>button {
+		display: none;
+	}
+}
+
+.blue-section {
+    color: white;
+    background: rgb(50,71,98);
+    background: linear-gradient(90deg, rgba(50,71,98,1) 0%, rgba(39,52,71,1) 100%);
+}
+
+.highlight-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.red-cube-li,
+.blue-cube-li,
+.green-cube-li {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-top: 30px;
+}
+
+.cube-ul {
+    width: 100%;
+    padding: 0;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #welcome>h1 {
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+@media only screen and (min-width: 700px) {
+	.highlight-box {
+        width: 600px;
+    }
+
+    .cube-ul {
+        width: 600px;
+    }
+}
