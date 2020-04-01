@@ -98,6 +98,11 @@ article {
         margin-bottom: 40px;
     }
 
+    article>img{
+        overflow: auto;
+        float: left;
+    }
+
 h1, h2, h3 {
     font-weight: 400;
 }
@@ -144,11 +149,26 @@ strong {
 }
 
 .blue-section {
-    color: white;
+    color: rgb(218, 218, 218);
     background: rgb(50,71,98);
     background: linear-gradient(90deg, rgba(50,71,98,1) 0%, rgba(39,52,71,1) 100%);
     padding: 60px 30px 45px 30px;
 }
+
+    .blue-section strong {
+        font-weight: 400;
+        color: #ffffff;
+    }
+
+.banner{
+    margin-top: 0;
+}
+
+    .banner h1{
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 34px;
+    }
 
 .highlight-box {
     display: flex;
@@ -185,20 +205,6 @@ strong {
         margin-right: 30px;
     }
 
-#welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-    #welcome>h1 {
-        font-size: 28px;
-        font-weight: 300;
-    }
-
-    #welcome>img{
-        width: 250px;
-    }
 
 @media only screen and (min-width: 700px) {
 	.highlight-box {
