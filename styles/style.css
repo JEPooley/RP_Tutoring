@@ -1,5 +1,5 @@
 :root {
-	--channel-width: 960px;
+	--channel-width: 800px;
     --header-height: 100px;
     --section-padding: 50px
 }
@@ -14,15 +14,20 @@ body {
     margin: 0;
 }
 
+a {
+    color: #545454;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
     height: var(--header-height);
 }
 
-    header>div {
+    header>a {
 	    display: flex;
-	    align-items: center;
+        align-items: center;
+        text-decoration: none;
     }
     
     header>nav {
@@ -32,8 +37,7 @@ header {
 	    width: 100%;
 	    text-align: center;
         top: var(--header-height);
-        color: white;
-        background: rgb(50,71,98);
+        background: white;
         padding: 20px 0 20px 0;
     }
 
@@ -45,12 +49,12 @@ header {
     header>nav>a {
         text-decoration: none;
         color: inherit;
-        font-size: 28px;
+        font-size: 22px;
         padding: 15px 0 15px 0;
     }
 
     header>nav>a:hover {
-        color: #ffffff;
+        color: #2d2d2d;
     }
 
     header>button {
@@ -85,7 +89,7 @@ footer {
 
 section {
     width: 100%;
-    margin-top: 120px;
+    margin-top: 90px;
     box-sizing: border-box;
     padding: 0 30px 0 30px;
 }
@@ -135,14 +139,14 @@ strong {
 	}
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1064px) {
     header>nav {
 		display: flex !important;
 		align-items: center;
         flex-direction: row;
         justify-content: space-around;
 		position: static;
-		width: 400px;
+		width: 700px;
         top: 0;
         color: #545454;
         background: none;
@@ -176,6 +180,11 @@ strong {
         color: #ffffff;
     }
 
+    .blue-section a {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
 #hero {
     margin-top: 0;
 }
@@ -192,6 +201,7 @@ strong {
 
 .banner {
     padding: 30px 30px 22px 30px;
+    margin-top: 140px;
 }
 
     .banner>article {
@@ -201,7 +211,7 @@ strong {
     }
 
     .banner>article h1 {
-        font-size: 28px;
+        font-size: 22px;
         text-align: left;
         margin-left: 20px;
     }
@@ -265,7 +275,51 @@ strong {
     }
 }
 
+#about {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#headshot {
+    width: 150px;
+    margin: 80px 0 0 0;
+}
+
 #devices {
     width: 250px;
     margin: 10px 0;
+}
+
+#paypal-button-container {
+    margin: 120px auto 0 auto;
+    width: 300px;
+}
+
+#contact-list {
+    list-style: none;
+}
+
+    #contact-list li {
+        padding: 15px 0 15px 50px;
+        display: flex
+    }
+
+    #contact-list i {
+        margin-right: 20px;
+        color: #a5a5a5;
+    }
+
+
+@media only screen and (min-width: 700px) {
+    #about {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #headshot {
+        width: 150px;
+        margin: 16px 60px 0 0;
+    }
 }
