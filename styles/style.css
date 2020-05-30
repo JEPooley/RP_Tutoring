@@ -299,11 +299,17 @@ strong {
 
 #contact-list {
     list-style: none;
+    padding-left: 0;
 }
 
     #contact-list li {
-        padding: 15px 0 15px 50px;
-        display: flex
+        display: flex;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+        hyphens: auto;
+        padding: 20px 0 0 0;
     }
 
     #contact-list i {
@@ -313,6 +319,15 @@ strong {
 
 
 @media only screen and (min-width: 700px) {
+
+    #contact-list {
+        padding-left: 40px;
+    }
+        #contact-list li {
+            padding: 20px 0 15px 50px;
+        }
+
+
     #about {
         flex-direction: row;
         align-items: flex-start;
