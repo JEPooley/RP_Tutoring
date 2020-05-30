@@ -71,6 +71,18 @@ header {
         margin: 0 10px 0 40px;
     }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    footer>div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
 section {
     width: 100%;
     margin-top: 120px;
@@ -102,6 +114,10 @@ article {
         overflow: auto;
         float: left;
     }
+
+.text-article{
+    margin-bottom: 120px;
+}
 
 h1, h2, h3 {
     font-weight: 400;
@@ -160,31 +176,57 @@ strong {
         color: #ffffff;
     }
 
-.banner{
+#hero {
     margin-top: 0;
 }
 
-    .banner h1{
+    #hero h1 {
         font-size: 28px;
         text-align: left;
         margin-bottom: 34px;
     }
 
-.highlight-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
+    #hero p{
+        text-align: left;
+    }
+
+.banner {
+    padding: 30px 30px 22px 30px;
 }
 
-.red-cube-li,
-.blue-cube-li,
-.green-cube-li {
-    list-style-type: none;
-    padding-inline-start: 0;
-    margin-bottom: 30px;
+    .banner>article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner>article h1 {
+        font-size: 28px;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+
+.number-ol {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+    .number-ol>li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        display: flex;
+        margin: 20px 0;
+    }
+
+    .number-ol>li>img {
+        display: inline-block;
+        width: 30px;
+        margin-right: 20px;
+    }
 
 .cube-ul {
     width: 100%;
@@ -207,12 +249,12 @@ strong {
 
 
 @media only screen and (min-width: 700px) {
-	.highlight-box {
+    .cube-ul {
         width: 600px;
     }
 
-    .cube-ul {
-        width: 600px;
+    .number-ol{
+        margin-left: 60px;
     }
 
     #welcome {
